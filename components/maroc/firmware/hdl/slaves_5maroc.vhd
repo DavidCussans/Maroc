@@ -83,6 +83,12 @@ architecture rtl of slaves_5maroc is
   signal s_strobe : std_logic;
   signal s_lines_to_pulse : std_logic_vector( s_pulsed_lines'range );
 
+  attribute mark_debug : string;
+  attribute keep : string;
+  attribute mark_debug of s_marocADCBusy , s_marocADCBusySummary , rst , s_marocMask , ipb_in , ipb_out: signal is "true";
+  attribute keep of s_marocADCBusy , s_marocADCBusySummary , rst , s_marocMask , ipb_in , ipb_out: signal is "true";
+
+
 begin
 
 --  Generate HDMI I/O for debugging.

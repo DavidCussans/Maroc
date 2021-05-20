@@ -93,7 +93,7 @@ architecture rtl of top is
 	signal inf_leds: std_logic_vector(1 downto 0);
 
     attribute keep : string;
-    attribute keep of nuke : signal is "true"; -- Bodge to keep un-used net 
+    attribute keep of nuke , clk_ipb: signal is "true"; -- Bodge to keep un-used net 
 	
 begin
 
